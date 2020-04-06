@@ -22,20 +22,14 @@
 
   function divide(num1, num2){
     if (num1 == undefined) num1=0;
-    if (num2 == undefined) num2=1;
+    if (num2 == undefined) num2=0;
     return num1 / num2;
   }
   function calc(operation, num1, num2) {
     switch(operation) {
-      case "add": return sum (num1, num2);
-      
-
-      case "substract": return difference(num1, num2);
-      
-
+      case "add": return sum(num1, num2);
+      case "subtract": return difference(num1, num2);
       case "multiply": return product(num1, num2);
-      
-
       case "divide": return divide(num1, num2);
       default: return "Operation not supported."
 
@@ -59,7 +53,7 @@ try {
   // Test Case 2
   // --------------------------------------------------
   // It should return the correct difference when the user provides: 'subtract', 20, 10.
-  var result = calc("substract", 20, 10);
+  var result = calc("subtract", 20, 10);
   if (result !== 10) throw new Error('Expected calc("substract", 20, 10) to be 10. Received: ' + result);
 
 
@@ -82,7 +76,7 @@ try {
   // --------------------------------------------------
   // It should return the message 'Operation not supported.' when the user provides: exponent, 2, 8.
   var result = calc("exponent", 2, 8);
-  if (result !== 'Operation not supported') throw new Error("Expected calc('exponent', 2, 8) to be 'Operation not supported.' Received: " + result);
+  if (result !== "Operation not supported.") throw new Error("Expected calc('exponent', 2, 8) to be 'Operation not supported.' Received: " + result);
 
   console.log('All tests passed successfully.');
 
