@@ -30,6 +30,14 @@
       case 'add': return sum (num1, num2);
       default: return "Operation not supported."
 
+      case 'substract': return difference (num1, num2);
+      default: return "Operation not supported."
+
+      case 'multiply': return product (num1, num2);
+      default: return "Operation not supported."
+
+      case 'quotient': return quotient (num1, num2);
+      default: return "Operation not supported."
 
   }
 
